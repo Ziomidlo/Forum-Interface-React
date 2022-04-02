@@ -1,0 +1,22 @@
+{
+    "articles" : [
+        {
+            "title": "temat1",
+            "user": "uzytkownik1",
+            "commentsNumber": 5,
+            "id": 1
+        },
+        {
+            "title": "aaaaaaaaaaaaa",
+            "user": "u1",
+            "commentsNumber": 10,
+            "id": 2
+        },
+        {
+            "title": "bb",
+            "user": "u2",
+            "commentsNumber": 7,
+            "id": 3
+        }
+    ]
+}
