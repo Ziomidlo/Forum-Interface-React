@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ArticleSite from "./ArticleSite";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 
@@ -9,16 +9,16 @@ const Navbar = () => {
        <nav className="navbar">
 
            <div className="homeLink">
-           <a href="/">Przegladaj artykuly</a>
+           <Link to="/">Przegladaj artykuly</Link>
            <p>Witaj { user }</p>
            </div>
            <div className="links">
-               <a href="/create" style={{
+               <Link to="/add" style={{
                    color: "white",
                    backgroundColor: '#f1356d',
                    borderRadius: '8px'
-               }}>Dodaj artykul</a>
-               <a href="/">Konto</a>
+               }}>Dodaj artykul</Link>
+               <Link to="/account">Konto</Link>
            </div>
        </nav>
       );
