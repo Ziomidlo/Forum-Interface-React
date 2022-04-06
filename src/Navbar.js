@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 
-    const  [user, setUser] = useState('Ziomidlo');
+    const  [user, setUser] = useState('uzytkownik');
 
     return (
        <nav className="navbar">

@@ -51,3 +51,28 @@
   text-align: center;
 }
 
+.article-preview a{
+  text-decoration: none;
+}
+
+.add-article h2{
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 30px;
+}
+.add-article input, .add-article textarea, .add-article select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+
+.add-article button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+}

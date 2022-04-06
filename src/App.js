@@ -3,9 +3,9 @@ import ArticleSite from './ArticleSite';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import AddArticle from './AddArticle';
 import Account from './Account';
+import ArticleDetails from './ArticleDetails';
 
 function App() {
-  const title = 'Forum'
 
   return (
     <Router>
@@ -21,6 +21,9 @@ function App() {
            </Route> 
            <Route path="/account">
             <Account />
+           </Route> 
+           <Route path="/articles/:id">
+            <ArticleDetails />
            </Route> 
           </Switch>
         </div>
