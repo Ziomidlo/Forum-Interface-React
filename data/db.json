@@ -4,34 +4,59 @@
       "title": "temat1",
       "user": "uzytkownik1",
       "body": "treść bloga 1234.",
-      "commentsNumber": 5,
       "id": 1
     },
     {
       "title": "aaaaaaaaaaaaa",
       "user": "u1",
       "body": "mam pewne zapytanie",
-      "commentsNumber": 10,
       "id": 2
     },
     {
-      "title": "bb",
-      "user": "u2",
-      "body": "Witam czy u panstwa tez jest taki problem?.",
-      "commentsNumber": 7,
+      "title": "Stworzyłem nową opcje",
+      "body": "Opcja zawiera dowawania autora arytkułu",
+      "user": "Nowy123",
+      "id": 5
+    },
+    {
+      "title": "asda",
+      "body": "qweqwea",
+      "user": "dasd",
+      "id": 7
+    },
+    {
+      "title": "O tekscie",
+      "body": "tekst w teorii literatury – wypowiedź stanowiąca zamkniętą całość z punktu widzenia treści, często utrwalona graficznie.\ntekst w tekstologii – utrwalony (najczęściej w postaci pisemnej) ciąg znaków językowych, przyjmowany jako niezmienny i niemogący podlegać przemianom w procesie komunikacji językowej.\ntekst w semiotyce – każdy wytwór kultury (tekst kultury) stanowiący całość uporządkowaną według określonych reguł, np. dzieło sztuki, ubiór, zachowanie realizujące jakiś utrwalony wzorzec kulturowy.\ntekst w językoznawstwie strukturalistycznym – przedmiot konkretny służący do przekazywania informacji na bazie rozumianego abstrakcyjnie języka; także fizyczny wytwór sytuacji komunikacyjnej.\ntekst w muzyce – słowa utworu muzycznego, np. piosenki lub arii.\ntekst spójny – koherentna (np. pod względem semantycznym lub formalnym) struktura języka naturalnego.",
+      "user": "Naukowiec",
+      "id": 8
+    },
+    {
+      "title": "fghfgh",
+      "body": "asdasd",
+      "user": "qweqwe",
+      "id": 9
+    }
+  ],
+  "comments": [
+    {
+      "body": "sad",
+      "user": "as",
       "id": 3
     },
     {
-      "title": "asdasdasd",
-      "body": "aaasssssa",
-      "user": "uzytkownik",
+      "body": "asd",
+      "user": "aaaas",
       "id": 4
     },
     {
-      "title": "Dodawanie artykułu",
-      "body": "W końcu nauczyłem się dodawać artykuł!",
-      "user": "u1",
+      "body": "asdlkl",
+      "user": "adasdasjk",
       "id": 5
+    },
+    {
+      "body": "qweqwe",
+      "user": "sdf",
+      "id": 6
     }
   ]
 }

@@ -8,8 +8,7 @@ const AddArticle = () => {
     const [isPending, setIsPending] = useState(false);
 
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    const handleSubmit = () => {
         const article = { title, body, user};
 
         setIsPending(true);
@@ -19,7 +18,6 @@ const AddArticle = () => {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(article)
         }).then(() => {
-            console.log('dodano nowy artykuł.');
             setIsPending(false);
         })
     }
@@ -41,17 +39,15 @@ const AddArticle = () => {
                     onChange={(e) => setBody(e.target.value)}
                 ></textarea>
                 <label>Autor artykułu:</label>
-                <select
+                <input
+                    type = "text"
                     required
                     value={ user }
                     onChange={(e) => setUser(e.target.value)}
-                >
-                    <option value="u1">u1</option>
-                    <option value="uzytkownik">uzytkownik</option>
-                </select>
-                { !isPending && <button>Dodaj Artykuł</button> }
-                { isPending && <button disabled>Dodawanie artykułu...</button> }
-            </form>
+                />
+                 {!isPending && <button>Dodaj Artykuł</button>}
+                 {isPending && <h3>Dodano nowy artykuł!</h3>}       
+            </form>          
         </div>
       );
 }

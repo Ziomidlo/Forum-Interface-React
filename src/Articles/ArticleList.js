@@ -10,8 +10,7 @@ const ArticleList = ({articles, handleDelete}) => {
                     <Link to = {`/articles/${article.id}`}>
                         <h2>{ article.title }</h2>  
                     </Link>
-                    <p>Stworzony przez: { article.user }</p>
-                    <p>Liczba komenatrzy: { article.commentsNumber }</p> 
+                    <p>Stworzony przez: { article.user }</p> 
                 </div>
             ))}
         </div>

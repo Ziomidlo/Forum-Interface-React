@@ -1,9 +1,15 @@
 import Navbar from './Navbar';
-import ArticleSite from './ArticleSite';
+import ArticleSite from './Articles/ArticleSite';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import AddArticle from './AddArticle';
-import Account from './Account';
-import ArticleDetails from './ArticleDetails';
+import AddArticle from './Articles/AddArticle';
+import AccountArticles from './Account/AccountArticles';
+import ArticleDelete from './Articles/ArticleDelete';
+import CommentSite from './Comments/CommentSite';
+import AddComment from './Comments/AddComment';
+import CommentDelete from './Comments/CommentDelete';
+import AccountComments from './Account/AccountComments';
+import ArticleCounter from './Account/ArticleCounter';
+import CommentCounter from './Account/CommentCounter';
 
 function App() {
 
@@ -20,10 +26,15 @@ function App() {
             <AddArticle />
            </Route> 
            <Route path="/account">
-            <Account />
+           <ArticleCounter />
+           <AccountArticles />
+           <CommentCounter />
+           <AccountComments />
            </Route> 
            <Route path="/articles/:id">
-            <ArticleDetails />
+            <ArticleDelete />
+            <CommentSite /> 
+            <AddComment />
            </Route> 
           </Switch>
         </div>

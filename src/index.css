@@ -47,9 +47,11 @@
   color: #f1356d;
 }
 
-.ArticleSite h1, h2, p {
+.ArticleSite h1,h2, p{
   text-align: center;
+  padding: 10px;
 }
+
 
 .article-preview a{
   text-decoration: none;
@@ -60,7 +62,7 @@
   color: #f1356d;
   margin-bottom: 30px;
 }
-.add-article input, .add-article textarea, .add-article select {
+.add-article input, .add-article textarea, .add-comment input, .add-comment textarea {
   width: 100%;
   padding: 6px 10px;
   margin: 10px 0px;
@@ -69,10 +71,70 @@
   display: block;
 }
 
-.add-article button {
+.add-article button, .add-comment button {
   background: #f1356d;
   color: #fff;
   border: 0;
   padding: 8px;
   border-radius: 8px;
+}
+
+.article-delete button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.add-comment h3 {
+  padding: 20px;
+}
+
+.comment-list h1{
+  padding: 5px;
+}
+
+.comment-list h2{
+  padding: 5px;
+}
+
+.comment-list p{
+  padding: 5px;
+}
+
+.comment-preview {
+  padding: 10px;
+  border: 1px solid rgb(216, 206, 206);
+  text-align: center;
+}
+
+
+.account-articles h1{
+  display: table;
+  padding: 5px;
+}
+
+.account-articles h2{
+  display: table;
+  padding: 5px;
+}
+
+.account-articles p{
+  display: table;
+  padding: 5px;
+}
+
+.account-comments p {
+  display: table;
+}
+
+.account-comments h2 {
+  display: table;
+}
+
+.comment-counter, .article-counter {
+  padding: 20px;
+  text-align: center;
 }

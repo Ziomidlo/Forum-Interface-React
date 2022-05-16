@@ -1,5 +1,5 @@
 import ArticleList from "./ArticleList";
-import useFetch from "./useFetch";
+import useFetch from "../useFetch";
 
 
 const ArticleSite = () => {
