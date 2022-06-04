@@ -1,16 +1,13 @@
-import { useState } from "react";
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
-
-    const  [user, setUser] = useState('uzytkownik');
 
     return (
        <nav className="navbar">
 
            <div className="homeLink">
            <Link to="/">Przegladaj artykuly</Link>
-           <p>Witaj { user }</p>
+           <p>Witaj na forum</p>
            </div>
            <div className="links">
                <Link to="/add" style={{

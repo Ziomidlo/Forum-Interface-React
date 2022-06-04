@@ -20,6 +20,21 @@
   padding: 50px;
 }
 
+.navbar h3{
+  display: inline;
+  padding: 50px;
+}
+
+.footer p, link{
+  padding: 20px;
+  display: inline-flex;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  border-top: 1px solid #f2f2f2;
+}
+
+
 .navbar .links {
   margin-left: auto;
 }
@@ -70,6 +85,21 @@
   box-sizing: border-box;
   display: block;
 }
+
+.admin, .input-container {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0px;
+  box-sizing: border-box;
+  display: block;
+}
+
+.button-container {
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+}
+
 
 .add-article button, .add-comment button {
   background: #f1356d;
@@ -138,3 +168,4 @@
   padding: 20px;
   text-align: center;
 }
+

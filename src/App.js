@@ -1,3 +1,4 @@
+import React from 'react';
 import Navbar from './Navbar';
 import ArticleSite from './Articles/ArticleSite';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -10,8 +11,16 @@ import CommentDelete from './Comments/CommentDelete';
 import AccountComments from './Account/AccountComments';
 import ArticleCounter from './Account/ArticleCounter';
 import CommentCounter from './Account/CommentCounter';
+import ArticleList from './Articles/ArticleList';
+import SingleArticle from './Articles/SingleArticle';
+import useFetch from './useFetch';
+import Footer from './Footer';
+import Admin from './Admin/Admin';
 
-function App() {
+  
+class App extends React.Component{
+
+render() {
 
   return (
     <Router>
@@ -32,15 +41,22 @@ function App() {
            <AccountComments />
            </Route> 
            <Route path="/articles/:id">
-            <ArticleDelete />
+            <SingleArticle />
             <CommentSite /> 
             <AddComment />
            </Route> 
+           <Route path="/admin" >
+           <Admin />
+           </Route>
           </Switch>
+          <div className="footer-app">
+          <Footer />
+           </div>
         </div>
       </div>
     </Router>
   );
+}
 }
 
 export default App;
