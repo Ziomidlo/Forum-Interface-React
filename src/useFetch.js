@@ -2,16 +2,17 @@ import { useState, useEffect } from 'react';
 
 const useFetch = (url) => { 
 
-    const [data, setData] = useState (null);
+    const [data, setData] = useState(null);
     const [isPending, setIsPending] = useState(true);
     const [error, setError] = useState(null);
 
 
     useEffect (() => {
-        const getData = async () => {
-        const abortCont = new AbortController();
 
-        await fetch(url, { signal: abortCont.signal })
+        const abortCont = new AbortController();
+         const getData = async () => {
+
+         await fetch(url, { signal: abortCont.signal })
         .then(res => {
 
             if(!res.ok) {
@@ -32,10 +33,9 @@ const useFetch = (url) => {
                 setError(err.message);   
             }
         })
-
-        return () => abortCont.abort();
-    }
+    } 
     getData();
+        return () => abortCont.abort();
     }, [url]);
 
     return {data, isPending, error}

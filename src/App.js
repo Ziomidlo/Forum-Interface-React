@@ -16,6 +16,7 @@ import SingleArticle from './Articles/SingleArticle';
 import useFetch from './useFetch';
 import Footer from './Footer';
 import Admin from './Admin/Admin';
+import SingleComment from './Comments/SingleComment';
 
   
 class App extends React.Component{
@@ -42,9 +43,9 @@ render() {
            </Route> 
            <Route path="/articles/:id">
             <SingleArticle />
-            <CommentSite /> 
+            <SingleComment/>
             <AddComment />
-           </Route> 
+            </Route>
            <Route path="/admin" >
            <Admin />
            </Route>

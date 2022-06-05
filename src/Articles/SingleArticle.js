@@ -1,9 +1,8 @@
-import React, {useEffect, useState} from 'react';
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
-import axios from 'axios';
 import useFetch from "../useFetch";
 
 const SingleArticle = () =>  {
+
 
     const { id } = useParams();
     const { data: article, error, isPending } = useFetch(`http://localhost:8000/articles/${id}`);
@@ -17,6 +16,7 @@ const SingleArticle = () =>  {
                     <h2>{ article.title }</h2>
                     <p>Stworzony przez { article.user }</p>
                     <div>{ article.body }</div>
+                    <div>{article.date}</div>
                 </article>
             )}
         </div>

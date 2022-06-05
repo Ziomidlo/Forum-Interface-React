@@ -5,6 +5,7 @@ import useFetch from "../useFetch";
 const ArticleSite = () => {
     
     const { data: articles, isPending, error } = useFetch('http://localhost:8000/articles')
+
     return (
         <div className="ArticleSite">
             { error && <div>{ error }</div> }

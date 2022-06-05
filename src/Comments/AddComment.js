@@ -1,27 +1,34 @@
-import { useState } from "react";
+import { useState} from "react";
+import { useParams } from "react-router-dom/cjs/react-router-dom.min";
+import useFetch from "../useFetch";
 
 const AddComment = () => {
     
     const [body, setBody] = useState('');
     const [user, setUser] = useState('');
-    const [isPending, setIsPending] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const { id } = useParams();
+    const { data: article, error, isPending} = useFetch(`http://localhost:8000/articles/${id}`);
 
     const handleSubmit = () => {
         const comment = {body, user};
 
-        setIsPending(true);
+            setLoading(true);
 
-        fetch('http://localhost:8000/comments', {
-            method: 'POST', 
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(comment)
-        }).then(() => {
-            setIsPending(false);
-        })
+            const requestOptions = {
+                method: 'POST',
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(comment)
+            };
+            fetch('http://localhost:8000/comments', requestOptions )
+            .then(response  => response.json())
+            .then(data => this.article({comment: data.id}))
+            setLoading(false);
     }
 
     return ( 
         <div className="add-comment">
+            {error && <div> {error} </div>}
             <h3>Dodaj Nowy Komentarz</h3>
             <form onSubmit={handleSubmit}>
                 <label>Zawartość komentarza:</label>
@@ -37,8 +44,8 @@ const AddComment = () => {
                     value={ user }
                     onChange={(e) => setUser(e.target.value)}
                 />
-                { !isPending && <button>Dodaj Komentarz</button> }
-                {isPending && <h4>Dodano nowy komentarz!</h4>}
+                {!loading && <button>Dodaj Komentarz</button> }
+                {loading && <h4>Dodano nowy komentarz!</h4>}
             </form>
         </div>  
      );
