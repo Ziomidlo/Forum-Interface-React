@@ -5,6 +5,7 @@ const Footer = () => {
         <footer className="footer">
             <p>Copyrights 2022 Jakub Ziomek | kziomek33@gmail.com  |</p>
             <Link to="/admin">Panel Admnistratora</Link>
+            <p>paragraf</p>
         </footer>
       );
 }
