@@ -43,7 +43,6 @@ render() {
            </Route> 
            <Route path="/articles/:id">
             <SingleArticle />
-            <SingleComment/>
             <AddComment />
             </Route>
            <Route path="/admin" >

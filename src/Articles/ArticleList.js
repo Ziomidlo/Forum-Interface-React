@@ -6,8 +6,8 @@ const ArticleList = ({articles}) => {
         <div className="article-list">
             <h1>Artykuły</h1>
             {articles.map((article) => (
-                <div className="article-preview" key={article._id}>
-                    <Link to = {`/articles/${article._id}`}>
+                <div className="article-preview" key={article.id}>
+                    <Link to = {`/articles/${article.id}`}>
                         <h2>{ article.title }</h2>  
                     </Link>
                     <p>Stworzony przez: { article.user }</p> 

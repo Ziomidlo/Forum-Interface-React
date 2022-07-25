@@ -10,9 +10,8 @@ const useFetch = (url) => {
     useEffect (() => {
 
         const abortCont = new AbortController();
-         const getData = async () => {
 
-         await fetch(url, { signal: abortCont.signal })
+        fetch(url, { signal: abortCont.signal })
         .then(res => {
 
             if(!res.ok) {
@@ -33,8 +32,7 @@ const useFetch = (url) => {
                 setError(err.message);   
             }
         })
-    } 
-    getData();
+
         return () => abortCont.abort();
     }, [url]);
 
