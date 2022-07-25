@@ -40,9 +40,10 @@ render() {
            <AccountArticles />
            <CommentCounter />
            <AccountComments />
-           </Route> 
+           </Route>
            <Route path="/articles/:id">
             <SingleArticle />
+            <Route path="/comments/:article" element = {<SingleComment/>}/>
             <AddComment />
             </Route>
            <Route path="/admin" >

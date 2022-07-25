@@ -3,11 +3,11 @@ import useFetch from "../useFetch";
 
 const SingleComment = () => {
 
-    const { id } = useParams ();
-    const { data: comment, error, isPending } = useFetch(`http://localhost:8000/comments/${id}`);
+    const { id, article} = useParams ();
+    const { data: comment, error, isPending } = useFetch(`http://localhost:8000/comments/${article}`);
 
     return (
-        <div className="single-comment">
+        <div className="single-comment">            
             { isPending && <div>Loading... </div>}
             { error && <div>{ error }</div>}
             { comment && comment.map((item) => (

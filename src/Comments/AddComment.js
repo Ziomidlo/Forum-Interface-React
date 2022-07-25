@@ -11,7 +11,7 @@ const AddComment = () => {
     const { data: article, error, isPending} = useFetch(`http://localhost:8000/articles/${id}`);
 
     const handleSubmit = () => {
-        const comment = {body, user};
+        const comment = {article, body, user};
 
             setLoading(true);
 
@@ -21,9 +21,9 @@ const AddComment = () => {
                 body: JSON.stringify(comment)
             };
             fetch('http://localhost:8000/comments', requestOptions )
-            .then(response  => response.json())
-            .then(data => this.article({comment: data.id}))
+            .then(() => {
             setLoading(false);
+            })
     }
 
     return ( 

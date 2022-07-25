@@ -5,7 +5,7 @@ const SingleArticle = () =>  {
 
 
     const { id } = useParams();
-    const { data: article, error, isPending } = useFetch('http://localhost:8000/articles/' + id);
+    const { data: article, error, isPending } = useFetch(`http://localhost:8000/articles/${id}`);
 
     return (
         <div className="article-delete">
