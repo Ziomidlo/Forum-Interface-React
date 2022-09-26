@@ -3,8 +3,8 @@ import useFetch from "../useFetch";
 
 const SingleComment = () => {
 
-    const { id, article} = useParams ();
-    const { data: comment, error, isPending } = useFetch(`http://localhost:8000/comments/${article}`);
+    const { articleId } = useParams ();
+    const { data: comment, error, isPending } = useFetch(`http://localhost:8000/comments/${articleId}`);
 
     return (
         <div className="single-comment">            

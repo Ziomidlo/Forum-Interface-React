@@ -35,6 +35,12 @@
       "body": "asdasd",
       "user": "qweqwe",
       "id": 9
+    },
+    {
+      "title": "test",
+      "body": "test",
+      "user": "test",
+      "id": 10
     }
   ],
   "comments": [
@@ -42,37 +48,37 @@
       "body": "sad",
       "user": "as",
       "id": 3,
-      "article" : 1
+      "articleId": 1
     },
     {
       "body": "asd",
       "user": "aaaas",
       "id": 4,
-      "article" : 1
+      "articleId": 1
     },
     {
       "body": "asdlkl",
       "user": "adasdasjk",
       "id": 5,
-      "article" : 1
+      "articleId": 1
     },
     {
       "body": "qweqwe",
       "user": "sdf",
       "id": 6,
-      "article" : 2
+      "articleId": 2
     },
     {
       "body": "komentarz",
       "user": "autor",
       "id": 7,
-      "article" : 2
+      "articleId": 2
     },
     {
       "body": "asdj",
       "user": "adaskdj",
       "id": 8,
-      "article" : 3
+      "articleId": 3
     }
   ]
 }
